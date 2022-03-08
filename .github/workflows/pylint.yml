@@ -27,4 +27,4 @@ jobs:
 
     - name: Analysing the code with pylint
       run: |
-        poetry run pylint iplib3
+        poetry run pylint project-name

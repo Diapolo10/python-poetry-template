@@ -36,9 +36,9 @@ include = ['CHANGELOG.md', 'LICENSE',]
 license = 'MIT'
 readme = 'README.md'
 
-homepage = 'https://pypi.org/project/iplib3/'
-repository = 'https://github.com/Diapolo10/iplib3'
-documentation = 'https://github.com/Diapolo10/iplib3/tree/main/docs'
+homepage = 'https://pypi.org/project/project-name/'
+repository = 'https://github.com/Diapolo10/project-name'
+documentation = 'https://github.com/Diapolo10/project-name/tree/main/docs'
 
 keywords = [
     'python3',
@@ -68,11 +68,11 @@ flake8 = '*'
 mypy = '*'
 pylint = '*'
 pyproject-flake8 = '*'
-pytest = '*'  # '^6.2.5'
-pytest-cov = '*'  # '^3.0.0'
-tox = '*'  # '^3.24.4'
-tox-gh-actions = '*'  # '^2.8.1'
-wheel = '*'  # '^0.37.0'
+pytest = '*'
+pytest-cov = '*'
+tox = '*'
+tox-gh-actions = '*'
+wheel = '*'
 
 
 [tool.poetry.urls]
