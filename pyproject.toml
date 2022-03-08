@@ -1,0 +1,139 @@
+[build-system]
+requires = ['poetry-core>=1.0.0', 'wheel',]
+build-backend = 'poetry.core.masonry.api'
+
+
+[tool.coverage.run]
+branch = true
+relative_files = true
+omit = [
+    '.tox/*',
+    'tests/*',
+]
+
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = 'E203,'
+max-complexity = 15  # Info: https://en.wikipedia.org/wiki/Cyclomatic_complexity
+per-file-ignores = """\
+# F401: Ignore "unused" imports
+# F403: Ignore star imports
+# F405: Ignore names from star imports
+__init__.py:F401,F403,F405\
+"""
+
+
+[tool.poetry]
+name = 'project-name'
+version = '0.1.0'
+description = "A template Poetry project structure."
+
+authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
+maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
+
+include = ['CHANGELOG.md', 'LICENSE',]
+license = 'MIT'
+readme = 'README.md'
+
+homepage = 'https://pypi.org/project/iplib3/'
+repository = 'https://github.com/Diapolo10/iplib3'
+documentation = 'https://github.com/Diapolo10/iplib3/tree/main/docs'
+
+keywords = [
+    'python3',
+]
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Programming Language :: Python :: Implementation :: PyPy',
+    'Typing :: Typed',
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+
+[tool.poetry.dev-dependencies]
+coverage = {version = '*', extras = ['toml',]}
+flake8 = '*'
+mypy = '*'
+pylint = '*'
+pyproject-flake8 = '*'
+pytest = '*'  # '^6.2.5'
+pytest-cov = '*'  # '^3.0.0'
+tox = '*'  # '^3.24.4'
+tox-gh-actions = '*'  # '^2.8.1'
+wheel = '*'  # '^0.37.0'
+
+
+[tool.poetry.urls]
+"Source code" = 'https://github.com/Diapolo10/project-name'
+"Tracker" = 'https://github.com/Diapolo10/project-name/issues'
+"Changelog" = 'https://github.com/Diapolo10/project-name/blob/main/CHANGELOG.md'
+
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = [
+    # 'R0911', # Too many return statements
+    # 'R0912', # Too many branches
+    # 'W0642', # Invalid assignment to self or cls in instance or class method, respectively.
+    # 'R0801', # Similar lines in 2 files
+]
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = """
+--doctest-modules \
+--cov=./ \
+--cov-append \
+--cov-report html:tests/reports/coverage-html \
+--cov-report xml:tests/reports/coverage.xml \
+--ignore=docs/
+"""
+testpaths = [
+    'tests',
+]
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py36, py37, py38, py39, pypy3
+isolated_build = True
+
+[gh-actions]
+python =
+    3.6: py36
+    3.7: py37
+    3.8: py38
+    3.9: py39
+    pypy-3.7: pypy3
+
+[gh-actions:env]
+PLATFORM =
+    ubuntu-latest: linux
+    macos-latest: macos
+    windows-latest: windows
+
+[testenv]
+passenv = GITHUB_*
+deps =
+    coverage
+    coveralls[toml]
+    pytest
+    pytest-cov
+    wheel
+commands =
+    coverage run -m pytest
+"""

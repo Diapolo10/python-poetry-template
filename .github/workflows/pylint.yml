@@ -1,0 +1,30 @@
+# This workflow runs the Pylint linter on git push
+
+name: Pylint
+
+on: [ push ]
+
+jobs:
+  pylint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2.3.4
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2.2.2
+      with:
+        python-version: 3.9
+
+    - name: Install Poetry
+      uses: Gr1N/setup-poetry@v4
+
+    - name: Install library and dependencies
+      run: |
+        poetry run pip install --upgrade pip setuptools
+        poetry install
+
+    - name: Analysing the code with pylint
+      run: |
+        poetry run pylint iplib3

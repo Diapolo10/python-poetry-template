@@ -1,2 +1,3 @@
 # python-poetry-template
- A template Poetry project structure.
+
+A template Poetry project structure.
