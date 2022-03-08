@@ -1,6 +1,6 @@
 # Inspired by: https://blog.mathieu-leplatre.info/tips-for-your-makefile-with-python.html
 
-PYMODULE := project-name
+PYMODULE := project_name
 TESTS := tests
 INSTALL_STAMP := .install.stamp
 POETRY := $(shell command -v poetry 2> /dev/null)

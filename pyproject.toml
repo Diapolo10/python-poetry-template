@@ -25,7 +25,7 @@ __init__.py:F401,F403,F405\
 
 
 [tool.poetry]
-name = 'project-name'
+name = 'project_name'
 version = '0.1.0'
 description = "A template Poetry project structure."
 
@@ -36,9 +36,9 @@ include = ['CHANGELOG.md', 'LICENSE',]
 license = 'MIT'
 readme = 'README.md'
 
-homepage = 'https://pypi.org/project/project-name/'
-repository = 'https://github.com/Diapolo10/project-name'
-documentation = 'https://github.com/Diapolo10/project-name/tree/main/docs'
+homepage = 'https://pypi.org/project/project_name/'
+repository = 'https://github.com/Diapolo10/project_name'
+documentation = 'https://github.com/Diapolo10/project_name/tree/main/docs'
 
 keywords = [
     'python3',
@@ -76,9 +76,9 @@ wheel = '*'
 
 
 [tool.poetry.urls]
-"Source code" = 'https://github.com/Diapolo10/project-name'
-"Tracker" = 'https://github.com/Diapolo10/project-name/issues'
-"Changelog" = 'https://github.com/Diapolo10/project-name/blob/main/CHANGELOG.md'
+"Source code" = 'https://github.com/Diapolo10/project_name'
+"Tracker" = 'https://github.com/Diapolo10/project_name/issues'
+"Changelog" = 'https://github.com/Diapolo10/project_name/blob/main/CHANGELOG.md'
 
 
 [tool.pylint.'MESSAGES CONTROL']
