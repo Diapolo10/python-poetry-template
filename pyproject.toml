@@ -14,7 +14,7 @@ omit = [
 
 [tool.flake8]
 max-line-length = 120
-extend-ignore = 'E203,'
+extend-ignore = ''  # https://www.flake8rules.com/
 max-complexity = 15  # Info: https://en.wikipedia.org/wiki/Cyclomatic_complexity
 per-file-ignores = """\
 # F401: Ignore "unused" imports
@@ -84,10 +84,7 @@ wheel = '*'
 [tool.pylint.'MESSAGES CONTROL']
 max-line-length = 120
 disable = [
-    # 'R0911', # Too many return statements
-    # 'R0912', # Too many branches
-    # 'W0642', # Invalid assignment to self or cls in instance or class method, respectively.
-    # 'R0801', # Similar lines in 2 files
+    # https://vald-phoenix.github.io/pylint-errors/
 ]
 
 
