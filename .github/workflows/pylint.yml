@@ -15,7 +15,7 @@ jobs:
     - name: Set up Python 3.9
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: '3.9'
 
     - name: Install Poetry
       uses: Gr1N/setup-poetry@v8
@@ -25,6 +25,10 @@ jobs:
         poetry run pip install --upgrade pip setuptools
         poetry install
 
-    - name: Analysing the code with pylint
+    - name: Analyse the code with pylint
       run: |
-        poetry run pylint project_name
+        poetry run pylint project_name --fail-under 9
+
+    - name: Analyse the automated tests with pylint
+      run: |
+        poetry run pylint tests --fail-under 9
