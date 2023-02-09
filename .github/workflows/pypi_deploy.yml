@@ -1,0 +1,23 @@
+# This workflow deploys a new release on PyPI once a pull request is closed
+
+name: Deploy to PyPI
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  pypi-deploy:
+    name: Build and publish Python 🐍 distributions 📦 to live PyPI
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Publish distribution 📦 to PyPI
+      uses: JRubics/poetry-publish@v1.15
+      with:
+        ignore_dev_requirements: 'yes'
+        pypi_token: ${{ secrets.PYPI_PASSWORD }}

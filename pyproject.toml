@@ -47,11 +47,11 @@ classifiers = [
     'Development Status :: 3 - Alpha',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
-    'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: Implementation :: CPython',
     'Programming Language :: Python :: Implementation :: PyPy',
     'Typing :: Typed',
@@ -111,11 +111,12 @@ isolated_build = True
 
 [gh-actions]
 python =
-    3.6: py36
     3.7: py37
     3.8: py38
     3.9: py39
-    pypy-3.7: pypy3
+    3.10: py310
+    3.11: py311
+    pypy-3.9: pypy3
 
 [gh-actions:env]
 PLATFORM =

@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3.0.0
+    - uses: actions/checkout@v3
 
     - name: Set up Python 3.9
-      uses: actions/setup-python@v3.0.0
+      uses: actions/setup-python@v4
       with:
         python-version: 3.9
 
     - name: Install Poetry
-      uses: Gr1N/setup-poetry@v7
+      uses: Gr1N/setup-poetry@v8
 
     - name: Install library and dependencies
       run: |

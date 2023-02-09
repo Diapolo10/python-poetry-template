@@ -1,10 +1,10 @@
 
-# project_name Change Log
+# project_name Changelog
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [CHANGELOG.md](http://changelog.md/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [CHANGELOG.md][CHANGELOG.md]
+and this project adheres to [Semantic Versioning][Semantic Versioning].
 
 <!-- 
 TEMPLATE
@@ -73,6 +73,9 @@ This is the initial version of the project.
 ### Added
 
 - The base project
+
+[CHANGELOG.md]: https://web.archive.org/web/20220330064336/https://changelog.md/
+[Semantic Versioning]: http://semver.org/
 
 <!-- markdownlint-configure-file {
     "MD022": false,

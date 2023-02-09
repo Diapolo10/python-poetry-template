@@ -1,0 +1,91 @@
+# This workflow automatically creates a GitHub release for the project on successful version update
+
+name: Create a GitHub release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    name: Build Binaries for ${{ matrix.os }}-${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [
+          '3.10',
+          'pypy-3.8',
+        ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        uses: Gr1N/setup-poetry@v8
+
+      - name: Install library and dependencies
+        run: |
+          poetry run pip install --upgrade pip setuptools
+          poetry install
+
+      - name: Build releases
+        run: |
+          poetry build
+
+      - name: Upload builds
+        uses: actions/upload-artifact@v3
+        with:
+          name: built-binary
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: built-binary
+
+      - name: Check Version
+        uses: nowsprinting/check-version-format-action@v3
+        id: version
+        with:
+          prefix: 'v'
+
+      - name: Check for Pre-release
+        uses: haya14busa/action-cond@v1
+        id: is_prerelease
+        with:
+          cond: ${{ steps.version.outputs.prerelease != '' }}
+          if_true: true
+          if_false: false
+
+      - name: Get Newest Changelog
+        run: |
+          python -c "import re; from pathlib import Path; text=re.sub('<!--(.*?)-->', '', (Path.cwd() / 'CHANGELOG.md').read_text(), flags=re.DOTALL); start=text.find('_' * 79); (Path.cwd() / 'TEMP_CHANGELOG.md').write_text(text[start:text.find('_' * 79, start+1)])"
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
+          draft: false
+          prerelease: ${{ steps.is_prerelease.outputs.value }}
+          body_path: ./TEMP_CHANGELOG.md
+          files: |
+            *.whl
+            *.tar.gz

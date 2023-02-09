@@ -1,23 +1,41 @@
 # [Pull request title here]
 
-## Purpose
+## Description
 
-_Describe the problem or feature in addition to a link to the issues._
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-## Approach
+Fixes # (issue)
 
-_How does this change address the problem?_
+## Type of change
 
-### Open Questions and Pre-Merge TODOs
+Please delete options that are not relevant.
 
-- [ ] Use GitHub checklists. When solved, check the box and explain the answer.
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
 
-## Learning
+## How has this been tested?
 
-_Describe the research stage._
+Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
 
-_Links to blog posts, patterns, libraries, or addons used to solve this problem._
+- [ ] Test A
+- [ ] Test B
 
-### Blog Posts
+**Test Configuration**:
 
-- [How to Pull Request](https://github.com/flexyford/pull-request) Github Repo with Learning focused Pull Request Template.
+- Firmware version:
+- Hardware:
+- Toolchain:
+- SDK:
+
+## Checklist
+
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+- [ ] Any dependent changes have been merged and published in downstream modules
