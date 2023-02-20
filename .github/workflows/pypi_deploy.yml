@@ -11,9 +11,10 @@ jobs:
   pypi-deploy:
     name: Build and publish Python 🐍 distributions 📦 to live PyPI
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@master
+
+    - name: Checkout repository
+      uses: actions/checkout@master
 
     - name: Publish distribution 📦 to PyPI
       uses: JRubics/poetry-publish@v1.16
