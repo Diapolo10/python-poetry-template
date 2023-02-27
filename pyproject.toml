@@ -47,11 +47,11 @@ classifiers = [
     'Development Status :: 3 - Alpha',
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
-    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
     'Programming Language :: Python :: Implementation :: CPython',
     'Programming Language :: Python :: Implementation :: PyPy',
     'Typing :: Typed',
@@ -59,15 +59,15 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = '^3.7'
+python = '^3.8.1'
 
 
 [tool.poetry.dev-dependencies]
 coverage = {version = '*', extras = ['toml',]}
 flake8 = '*'
+flake8-pyproject = '*'
 mypy = '*'
 pylint = '*'
-pyproject-flake8 = '*'
 pytest = '*'
 pytest-cov = '*'
 tox = '*'
@@ -75,7 +75,6 @@ tox-gh-actions = '*'
 
 
 [tool.poetry.urls]
-"Source code" = 'https://github.com/Diapolo10/project_name'
 "Tracker" = 'https://github.com/Diapolo10/project_name/issues'
 "Changelog" = 'https://github.com/Diapolo10/project_name/blob/main/CHANGELOG.md'
 
@@ -110,7 +109,6 @@ isolated_build = True
 
 [gh-actions]
 python =
-    3.7: py37
     3.8: py38
     3.9: py39
     3.10: py310
