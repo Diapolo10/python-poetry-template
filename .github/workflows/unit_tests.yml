@@ -16,15 +16,12 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         tox-env: [
-          py37,
           py38,
           py39,
           py310,
           pypy3
         ]
         include:
-          - tox-env: py37
-            python-version: '3.7'
           - tox-env: py38
             python-version: '3.8'
           - tox-env: py39
