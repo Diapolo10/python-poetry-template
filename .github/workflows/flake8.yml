@@ -23,7 +23,7 @@ jobs:
     - name: Install library and dependencies
       run: |
         poetry run pip install --upgrade pip setuptools
-        poetry install
+        poetry install --only linters
 
     - name: Lint with flake8
       run: |
