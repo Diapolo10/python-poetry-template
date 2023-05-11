@@ -12,18 +12,6 @@ omit = [
 ]
 
 
-[tool.flake8]
-max-line-length = 120
-extend-ignore = ''  # https://www.flake8rules.com/
-max-complexity = 15  # Info: https://en.wikipedia.org/wiki/Cyclomatic_complexity
-per-file-ignores = """\
-# F401: Ignore "unused" imports
-# F403: Ignore star imports
-# F405: Ignore names from star imports
-__init__.py:F401,F403,F405\
-"""
-
-
 [tool.poetry]
 name = 'project_name'
 version = '0.1.0'
@@ -71,9 +59,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-flake8 = '*'
-flake8-pyproject = '*'
-pylint = '*'
+ruff = '*'
 
 
 [tool.poetry.group.tests]
@@ -93,13 +79,6 @@ tox-gh-actions = '*'
 "Changelog" = 'https://github.com/Diapolo10/project_name/blob/main/CHANGELOG.md'
 
 
-[tool.pylint.'MESSAGES CONTROL']
-max-line-length = 120
-disable = [
-    # https://vald-phoenix.github.io/pylint-errors/
-]
-
-
 [tool.pytest.ini_options]
 minversion = '6.0'
 addopts = """
@@ -113,6 +92,75 @@ addopts = """
 testpaths = [
     'tests',
 ]
+
+
+[tool.ruff]
+select = [
+    'A',   # Builtins
+    'ANN', # Annotations
+    'ARG', # Unused arguments
+    'B',   # Bugbear
+    'BLE', # Blind except
+    'C4',  # Comprehensions
+    'C90', # mccabe
+    'COM', # Commas
+    'DTZ', # Datetimes
+    'ERA', # Commented-out code
+    'EXE', # Executable
+    'G',   # Logging format
+    'I',   # Isort
+    'ICN', # Import conventions
+    'INP', # Disallow PEP-420 (Implicit namespace packages)
+    'INT', # gettext
+    'ISC', # Implicit str concat
+    'N',   # PEP-8 Naming
+    'NPY', # Numpy
+    'PGH', # Pygrep hooks
+    'PIE', # Unnecessary code
+    'PL',  # Pylint
+    'PT',  # Pytest
+    'PTH', # Use Pathlib
+    'PYI', # Stub files
+    'RET', # Return
+    'RUF', # Ruff
+    'RSE', # Raise
+    'S',   # Bandit
+    'SIM', # Code simplification
+    'SLF', # Private member access
+    'T20', # Print
+    'TCH', # Type checking
+    'TID', # Tidy imports
+    'UP',  # Pyupgrade
+    'W',   # Warnings
+    'YTT', # sys.version
+]
+ignore = [
+    'PLR0913',  # Too many arguments
+]
+ignore-init-module-imports = true
+line-length = 120
+
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+
+[tool.ruff.per-file-ignores]
+# https://beta.ruff.rs/docs/rules/
+'__init__.py' = ['F401','F403','F405',]
+'tests/*' = ['ARG', 'S101',]
+
+
+[tool.ruff.pylint]
+max-args = 15
+max-branches = 20
+max-returns = 10
+max-statements = 80
+
+
+[tool.ruff.flake8-tidy-imports]
+ban-relative-imports = "all"
 
 
 [tool.tox]

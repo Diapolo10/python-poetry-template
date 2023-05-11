@@ -141,3 +141,6 @@ tests/reports
 
 # Makefile installation stamp
 .install.stamp
+
+# Ruff
+.ruff_cache

@@ -1,0 +1,44 @@
+# This workflow runs the Ruff linter
+
+name: Ruff
+
+on: [ push, pull_request ]
+
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Poetry
+      uses: Gr1N/setup-poetry@v8
+
+    - name: Install library and dependencies
+      run: |
+        poetry run pip install --upgrade pip setuptools
+        poetry install --only linters
+
+    - name: Lint with Ruff
+      run: |
+        poetry run ruff check --fix .
+        echo "RUFF_SUCCESS=$([ $? -eq 0 ])" >> $GITHUB_ENV
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      if: ${{ !env.RUFF_SUCCESS }}
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        title: "Format Python code with Ruff push"
+        commit-message: "[PATCH] Ruff auto-format"
+        body: |
+          There appear to be some python formatting errors in ${{ github.sha }}.
+          This pull request uses the Ruff formatter to fix some of these issues.
+        base: ${{ github.head_ref }} # Creates pull request onto pull request or commit branch
+        branch: actions/ruff
