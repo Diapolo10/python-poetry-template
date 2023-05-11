@@ -2,7 +2,7 @@
 
 # import pytest
 
-def test_stub():
+def test_stub() -> None:
     """Lorem Ipsum"""
     assert True
     assert not False
