@@ -20,7 +20,7 @@ description = "A template Poetry project structure."
 authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 
-include = ['CHANGELOG.md', 'LICENSE',]
+include = ['CHANGELOG.md', 'LICENSE', 'py.typed',]
 license = 'MIT'
 readme = 'README.md'
 
@@ -51,7 +51,7 @@ python = '^3.8.1'
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = '*'
+mypy = '^1.3.0'
 
 
 [tool.poetry.group.linters]
@@ -59,7 +59,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-ruff = '*'
+ruff = '^0.0.270'
 
 
 [tool.poetry.group.tests]
@@ -67,11 +67,10 @@ optional = true
 
 
 [tool.poetry.group.tests.dependencies]
-coverage = {version = '*', extras = ['toml',]}
-pytest = '*'
-pytest-cov = '*'
-tox = '*'
-tox-gh-actions = '*'
+pytest = '^7.3.1'
+pytest-cov = '^4.1.0'
+tox = '^4.6.0'
+tox-gh-actions = '^3.1.1'
 
 
 [tool.poetry.urls]
