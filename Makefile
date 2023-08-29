@@ -36,11 +36,9 @@ lint: $(INSTALL_STAMP)
     # Configured in pyproject.toml
     # Skips mypy if not installed
     # 
-    # $(POETRY) run isort --profile=black --lines-after-imports=2 --check-only $(TESTS) $(PYMODULE)
     # $(POETRY) run black --check $(TESTS) $(PYMODULE) --diff
 	@if [ -z $(MYPY) ]; then echo "Mypy not found, skipping..."; else echo "Running Mypy..."; $(POETRY) run mypy $(PYMODULE) $(TESTS); fi
-	@echo "Running Flake8..."; $(POETRY) run pflake8 # This is not a typo
-	@echo "Running Pylint..."; $(POETRY) run pylint $(PYMODULE)
+	@echo "Running Ruff..."; $(POETRY) run ruff . --fix
 
 .PHONY: test
 test: $(INSTALL_STAMP)
