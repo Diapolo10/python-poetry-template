@@ -28,7 +28,7 @@ install: $(INSTALL_STAMP)
 $(INSTALL_STAMP): pyproject.toml
 	@if [ -z $(POETRY) ]; then echo "Poetry could not be found. See https://python-poetry.org/docs/"; exit 2; fi
 	$(POETRY) run pip install --upgrade pip setuptools
-	$(POETRY) install
+	$(POETRY) install --with dev,tests,linters
 	touch $(INSTALL_STAMP)
 
 .PHONY: lint
