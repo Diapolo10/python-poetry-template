@@ -74,7 +74,7 @@ This is the initial version of the project.
 
 - The base project
 
-[CHANGELOG.md]: https://web.archive.org/web/20220330064336/https://changelog.md/
+[CHANGELOG.md]: https://keepachangelog.com/en/1.1.0/
 [Semantic Versioning]: http://semver.org/
 
 <!-- markdownlint-configure-file {
