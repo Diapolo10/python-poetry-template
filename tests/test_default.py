@@ -1,7 +1,7 @@
-"""Stub unit test file"""
+"""Stub unit test file."""
 
 
 def test_stub() -> None:
-    """Lorem Ipsum"""
+    """Lorem Ipsum."""
     assert True
     assert not False

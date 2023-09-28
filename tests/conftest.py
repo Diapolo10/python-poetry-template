@@ -1,1 +1,1 @@
-"""Contains global fixtures for unit tests"""
+"""Contains global fixtures for unit tests."""

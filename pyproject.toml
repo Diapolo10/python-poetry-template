@@ -13,9 +13,13 @@ omit = [
 
 
 [tool.poetry]
-name = 'project_name'
+name = 'project-name'
 version = '0.1.0'
 description = "A template Poetry project structure."
+
+packages = [
+    { include = 'project_name', from = 'src' },
+]
 
 authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
@@ -95,49 +99,76 @@ testpaths = [
 
 [tool.ruff]
 select = [
-    'A',   # Builtins
-    'ANN', # Annotations
-    'ARG', # Unused arguments
-    'B',   # Bugbear
-    'BLE', # Blind except
-    'C4',  # Comprehensions
-    'C90', # mccabe
-    'COM', # Commas
-    'DTZ', # Datetimes
-    'ERA', # Commented-out code
-    'EXE', # Executable
-    'G',   # Logging format
-    'I',   # Isort
-    'ICN', # Import conventions
-    'INP', # Disallow PEP-420 (Implicit namespace packages)
-    'INT', # gettext
-    'ISC', # Implicit str concat
-    'N',   # PEP-8 Naming
-    'NPY', # Numpy
-    'PGH', # Pygrep hooks
-    'PIE', # Unnecessary code
-    'PL',  # Pylint
-    'PT',  # Pytest
-    'PTH', # Use Pathlib
-    'PYI', # Stub files
-    'RET', # Return
-    'RUF', # Ruff
-    'RSE', # Raise
-    'S',   # Bandit
-    'SIM', # Code simplification
-    'SLF', # Private member access
-    'T20', # Print
-    'TCH', # Type checking
-    'TID', # Tidy imports
-    'UP',  # Pyupgrade
-    'W',   # Warnings
-    'YTT', # sys.version
+    'A',    # Builtins
+    'ANN',  # Annotations
+    'ARG',  # Unused arguments
+    'B',    # Bugbear
+    'BLE',  # Blind except
+    'C4',   # Comprehensions
+    'C90',  # mccabe
+    'COM',  # Commas
+    'D1',   # Undocumented public elements
+    'D2',   # Docstring conventions
+    'D3',   # Triple double quotes
+    'D4',   # Docstring terxt format
+    'DTZ',  # Datetimes
+    'EM',   # Error messages
+    'ERA',  # Commented-out code
+    'EXE',  # Executable
+    'F',    # Pyflakes
+    'FA',   # __future__ annotations
+    'FLY',  # F-strings
+    # 'FURB', # Refurb
+    'G',    # Logging format
+    'I',    # Isort
+    'ICN',  # Import conventions
+    'INP',  # Disallow PEP-420 (Implicit namespace packages)
+    'INT',  # gettext
+    'ISC',  # Implicit str concat
+    # 'LOG',  # Logging
+    'N',    # PEP-8 Naming
+    'NPY',  # Numpy
+    'PERF', # Unnecessary performance costs
+    'PGH',  # Pygrep hooks
+    'PIE',  # Unnecessary code
+    'PL',   # Pylint
+    'PT',   # Pytest
+    'PTH',  # Use Pathlib
+    'PYI',  # Stub files
+    'Q',    # Quotes
+    'RET',  # Return
+    'RUF',  # Ruff
+    'RSE',  # Raise
+    'S',    # Bandit
+    'SIM',  # Code simplification
+    'SLF',  # Private member access
+    'SLOT', # __slots__
+    'T10',  # Debugger
+    'T20',  # Print
+    'TCH',  # Type checking
+    'TID',  # Tidy imports
+    'TRY',  # Exception handling
+    'UP',   # Pyupgrade
+    'W',    # Warnings
+    'YTT',  # sys.version
 ]
 ignore = [
-    'PLR0913',  # Too many arguments
+    'D203',    # One blank line before class docstring
+    'D212',    # Multi-line summary first line
+    'PLR0913', # Too many arguments
+    'Q000',    # Single quotes found but double quotes preferred
 ]
 ignore-init-module-imports = true
 line-length = 120
+# preview = true
+show-fixes = true
+src = ['src',]
+target-version = 'py38'
+
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = 'double'
+multiline-quotes = 'double'
 
 
 [tool.ruff.mccabe]
@@ -159,7 +190,7 @@ max-statements = 80
 
 
 [tool.ruff.flake8-tidy-imports]
-ban-relative-imports = "all"
+ban-relative-imports = 'all'
 
 
 [tool.tox]
