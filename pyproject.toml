@@ -63,7 +63,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-ruff = '^0.0.291'
+ruff = '^0.0.292'
 
 
 [tool.poetry.group.tests]
