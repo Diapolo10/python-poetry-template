@@ -110,7 +110,7 @@ select = [
     'D1',   # Undocumented public elements
     'D2',   # Docstring conventions
     'D3',   # Triple double quotes
-    'D4',   # Docstring terxt format
+    'D4',   # Docstring text format
     'DTZ',  # Datetimes
     'EM',   # Error messages
     'ERA',  # Commented-out code
