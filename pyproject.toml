@@ -28,9 +28,9 @@ include = ['CHANGELOG.md', 'LICENSE', 'py.typed',]
 license = 'MIT'
 readme = 'README.md'
 
-homepage = 'https://pypi.org/project/project_name/'
-repository = 'https://github.com/Diapolo10/project_name'
-documentation = 'https://github.com/Diapolo10/project_name/tree/main/docs'
+homepage = 'https://pypi.org/project/project-name/'
+repository = 'https://github.com/Diapolo10/project-name'
+documentation = 'https://github.com/Diapolo10/project-name/tree/main/docs'
 
 keywords = [
     'python3',
@@ -78,8 +78,8 @@ tox-gh-actions = '^3.1.3'
 
 
 [tool.poetry.urls]
-"Tracker" = 'https://github.com/Diapolo10/project_name/issues'
-"Changelog" = 'https://github.com/Diapolo10/project_name/blob/main/CHANGELOG.md'
+"Tracker" = 'https://github.com/Diapolo10/project-name/issues'
+"Changelog" = 'https://github.com/Diapolo10/project-name/blob/main/CHANGELOG.md'
 
 
 [tool.pytest.ini_options]

@@ -1,4 +1,4 @@
-# Contributing to the `project_name` project
+# Contributing to the `project-name` project
 
 ## Filing a bug report
 
@@ -21,7 +21,7 @@ You may NOT suggest features through email to the core developers.
 
 ## Setting up your development environment
 
-Since `project_name` has very little to do beyond programming and testing,
+Since `project-name` has very little to do beyond programming and testing,
 the following should be enough for 95% of all contributors:
 
 1. A working Git or GitHub Desktop installation
@@ -30,5 +30,5 @@ the following should be enough for 95% of all contributors:
 4. The following, non-standard PyPI modules (available through `pip`):
     - `poetry`
 
-[Issues]: https://github.com/Diapolo10/project_name/issues
-[Projects]: https://github.com/Diapolo10/project_name/projects
+[Issues]: https://github.com/Diapolo10/project-name/issues
+[Projects]: https://github.com/Diapolo10/project-name/projects
