@@ -55,7 +55,7 @@ python = '^3.8.1'
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = '^1.7.1'
+mypy = '^1.8.0'
 
 
 [tool.poetry.group.linters]
