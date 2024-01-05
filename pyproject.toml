@@ -1,61 +1,61 @@
 [build-system]
-requires = ['poetry-core>=1.2.0', 'wheel',]
-build-backend = 'poetry.core.masonry.api'
+requires = ["poetry-core>=1.2.0", "wheel",]
+build-backend = "poetry.core.masonry.api"
 
 
 [tool.coverage.run]
 branch = true
 relative_files = true
 omit = [
-    '.tox/*',
-    'tests/*',
+    ".tox/*",
+    "tests/*",
 ]
 
 
 [tool.poetry]
-name = 'project-name'
-version = '0.1.0'
+name = "project-name"
+version = "0.1.0"
 description = "A template Poetry project structure."
 
 packages = [
-    { include = 'project_name', from = 'src' },
+    { include = "project_name", from = "src" },
 ]
 
 authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 
-include = ['CHANGELOG.md', 'LICENSE', 'py.typed',]
-license = 'MIT'
-readme = 'README.md'
+include = ["CHANGELOG.md", "LICENSE", "py.typed",]
+license = "MIT"
+readme = "README.md"
 
-homepage = 'https://pypi.org/project/project-name/'
-repository = 'https://github.com/Diapolo10/project-name'
-documentation = 'https://github.com/Diapolo10/project-name/tree/main/docs'
+homepage = "https://pypi.org/project/project-name/"
+repository = "https://github.com/Diapolo10/project-name"
+documentation = "https://github.com/Diapolo10/project-name/tree/main/docs"
 
 keywords = [
-    'python3',
+    "python3",
 ]
 classifiers = [
-    'Development Status :: 3 - Alpha',
-    'License :: OSI Approved :: MIT License',
-    'Operating System :: OS Independent',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-    'Programming Language :: Python :: 3.11',
-    'Programming Language :: Python :: 3.12',
-    'Programming Language :: Python :: Implementation :: CPython',
-    'Programming Language :: Python :: Implementation :: PyPy',
-    'Typing :: Typed',
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Typing :: Typed",
 ]
 
 
 [tool.poetry.dependencies]
-python = '^3.8.1'
+python = "^3.8.1"
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = '^1.8.0'
+mypy = "^1.8.0"
 
 
 [tool.poetry.group.linters]
@@ -63,7 +63,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-ruff = '^0.1.11'
+ruff = "^0.1.11"
 
 
 [tool.poetry.group.tests]
@@ -71,19 +71,19 @@ optional = true
 
 
 [tool.poetry.group.tests.dependencies]
-pytest = '^7.4.4'
-pytest-cov = '^4.1.0'
-tox = '^4.11.4'
-tox-gh-actions = '^3.2.0'
+pytest = "^7.4.4"
+pytest-cov = "^4.1.0"
+tox = "^4.11.4"
+tox-gh-actions = "^3.2.0"
 
 
 [tool.poetry.urls]
-"Tracker" = 'https://github.com/Diapolo10/project-name/issues'
-"Changelog" = 'https://github.com/Diapolo10/project-name/blob/main/CHANGELOG.md'
+"Tracker" = "https://github.com/Diapolo10/project-name/issues"
+"Changelog" = "https://github.com/Diapolo10/project-name/blob/main/CHANGELOG.md"
 
 
 [tool.pytest.ini_options]
-minversion = '6.0'
+minversion = "6.0"
 addopts = """
 --doctest-modules \
 --cov=./ \
@@ -93,82 +93,82 @@ addopts = """
 --ignore=docs/
 """
 testpaths = [
-    'tests',
+    "tests",
 ]
 
 
 [tool.ruff]
 select = [
-    'A',    # Builtins
-    'ANN',  # Annotations
-    'ARG',  # Unused arguments
-    'B',    # Bugbear
-    'BLE',  # Blind except
-    'C4',   # Comprehensions
-    'C90',  # mccabe
-    'COM',  # Commas
-    'D1',   # Undocumented public elements
-    'D2',   # Docstring conventions
-    'D3',   # Triple double quotes
-    'D4',   # Docstring text format
-    'DTZ',  # Datetimes
-    'EM',   # Error messages
-    'ERA',  # Commented-out code
-    'EXE',  # Executable
-    'F',    # Pyflakes
-    'FA',   # __future__ annotations
-    'FLY',  # F-strings
-    # 'FURB', # Refurb
-    'G',    # Logging format
-    'I',    # Isort
-    'ICN',  # Import conventions
-    'INP',  # Disallow PEP-420 (Implicit namespace packages)
-    'INT',  # gettext
-    'ISC',  # Implicit str concat
-    # 'LOG',  # Logging
-    'N',    # PEP-8 Naming
-    'NPY',  # Numpy
-    'PERF', # Unnecessary performance costs
-    'PGH',  # Pygrep hooks
-    'PIE',  # Unnecessary code
-    'PL',   # Pylint
-    'PT',   # Pytest
-    'PTH',  # Use Pathlib
-    'PYI',  # Stub files
-    'Q',    # Quotes
-    'RET',  # Return
-    'RUF',  # Ruff
-    'RSE',  # Raise
-    'S',    # Bandit
-    'SIM',  # Code simplification
-    'SLF',  # Private member access
-    'SLOT', # __slots__
-    'T10',  # Debugger
-    'T20',  # Print
-    'TCH',  # Type checking
-    'TID',  # Tidy imports
-    'TRY',  # Exception handling
-    'UP',   # Pyupgrade
-    'W',    # Warnings
-    'YTT',  # sys.version
+    "A",    # Builtins
+    "ANN",  # Annotations
+    "ARG",  # Unused arguments
+    "B",    # Bugbear
+    "BLE",  # Blind except
+    "C4",   # Comprehensions
+    "C90",  # mccabe
+    "COM",  # Commas
+    "D1",   # Undocumented public elements
+    "D2",   # Docstring conventions
+    "D3",   # Triple double quotes
+    "D4",   # Docstring text format
+    "DTZ",  # Datetimes
+    "EM",   # Error messages
+    "ERA",  # Commented-out code
+    "EXE",  # Executable
+    "F",    # Pyflakes
+    "FA",   # __future__ annotations
+    "FLY",  # F-strings
+    # "FURB", # Refurb
+    "G",    # Logging format
+    "I",    # Isort
+    "ICN",  # Import conventions
+    "INP",  # Disallow PEP-420 (Implicit namespace packages)
+    "INT",  # gettext
+    "ISC",  # Implicit str concat
+    # "LOG",  # Logging
+    "N",    # PEP-8 Naming
+    "NPY",  # Numpy
+    "PERF", # Unnecessary performance costs
+    "PGH",  # Pygrep hooks
+    "PIE",  # Unnecessary code
+    "PL",   # Pylint
+    "PT",   # Pytest
+    "PTH",  # Use Pathlib
+    "PYI",  # Stub files
+    "Q",    # Quotes
+    "RET",  # Return
+    "RUF",  # Ruff
+    "RSE",  # Raise
+    "S",    # Bandit
+    "SIM",  # Code simplification
+    "SLF",  # Private member access
+    "SLOT", # __slots__
+    "T10",  # Debugger
+    "T20",  # Print
+    "TCH",  # Type checking
+    "TID",  # Tidy imports
+    "TRY",  # Exception handling
+    "UP",   # Pyupgrade
+    "W",    # Warnings
+    "YTT",  # sys.version
 ]
 ignore = [
-    'D203',    # One blank line before class docstring
-    'D212',    # Multi-line summary first line
-    'PLR0913', # Too many arguments
-    'Q000',    # Single quotes found but double quotes preferred
+    "D203",    # One blank line before class docstring
+    "D212",    # Multi-line summary first line
+    "PLR0913", # Too many arguments
+    "Q000",    # Single quotes found but double quotes preferred
 ]
 ignore-init-module-imports = true
 line-length = 120
 # preview = true
 show-fixes = true
-src = ['src',]
-target-version = 'py38'
+src = ["src",]
+target-version = "py38"
 
 
 [tool.ruff.flake8-quotes]
-docstring-quotes = 'double'
-multiline-quotes = 'double'
+docstring-quotes = "double"
+multiline-quotes = "double"
 
 
 [tool.ruff.mccabe]
@@ -178,8 +178,8 @@ max-complexity = 10
 
 [tool.ruff.per-file-ignores]
 # https://beta.ruff.rs/docs/rules/
-'__init__.py' = ['F401','F403','F405',]
-'tests/*' = ['ANN', 'ARG', 'INP001', 'S101',]
+"__init__.py" = ["F401","F403","F405",]
+"tests/*" = ["ANN", "ARG", "INP001", "S101",]
 
 
 [tool.ruff.pylint]
@@ -190,7 +190,7 @@ max-statements = 80
 
 
 [tool.ruff.flake8-tidy-imports]
-ban-relative-imports = 'all'
+ban-relative-imports = "all"
 
 
 [tool.tox]
