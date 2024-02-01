@@ -39,7 +39,7 @@ jobs:
         echo "RUFF_SUCCESS=$([ $? -eq 0 ])" >> $GITHUB_ENV
 
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v6
       if: ${{ !env.RUFF_SUCCESS }}
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
