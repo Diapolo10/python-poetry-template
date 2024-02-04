@@ -7,3 +7,9 @@ Remember to:
 3. Rename the source code folder from `project_name` to something more fitting
 4. Generate a lock file
 5. Rewrite the `README.md`
+6. If the project is not an executable, delete the files:
+   * `src/project_name/main.py`
+   * `src/project_name/logger.py`
+   * `src/project_name/logger_config.toml`
+   * `src/project_name/config.py`
+   * `python-dotenv` and `tomli` as dependencies in `pyproject.toml` (unless otherwise needed)
