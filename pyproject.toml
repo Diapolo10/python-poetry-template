@@ -52,6 +52,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
+python-dotenv = "^1.0.1"
+tomli = { version = "^2.0.1", python = "<3.11" }
 
 
 [tool.poetry.group.dev.dependencies]
@@ -172,7 +174,6 @@ multiline-quotes = "double"
 
 
 [tool.ruff.mccabe]
-# Unlike Flake8, default to a complexity level of 10.
 max-complexity = 10
 
 
