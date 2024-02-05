@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Publish distribution 📦 to PyPI
-      uses: JRubics/poetry-publish@v1.17
+      uses: JRubics/poetry-publish@v2.0
       with:
         ignore_dev_requirements: 'yes'
         pypi_token: ${{ secrets.PYPI_PASSWORD }}

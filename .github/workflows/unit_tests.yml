@@ -78,7 +78,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Publish distribution 📦 to Test PyPI
-      uses: JRubics/poetry-publish@v1.17
+      uses: JRubics/poetry-publish@v2.0
       continue-on-error: true
       with:
         ignore_dev_requirements: 'yes'
