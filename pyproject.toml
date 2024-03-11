@@ -55,7 +55,7 @@ python = "^3.8.1"
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.8.0"
+mypy = "^1.9.0"
 
 
 [tool.poetry.group.linters]
@@ -63,7 +63,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-ruff = "^0.3.1"
+ruff = "^0.3.2"
 
 
 [tool.poetry.group.tests]
@@ -71,7 +71,7 @@ optional = true
 
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^8.1.0"
+pytest = "^8.1.1"
 pytest-cov = "^4.1.0"
 tox = "^4.14.1"
 tox-gh-actions = "^3.2.0"
