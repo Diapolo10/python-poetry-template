@@ -24,7 +24,7 @@ packages = [
 authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
 
-include = ["CHANGELOG.md", "LICENSE", "py.typed",]
+include = []
 license = "MIT"
 readme = "README.md"
 
