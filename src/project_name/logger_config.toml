@@ -1,6 +1,11 @@
 version = 1
 disable_existing_loggers = false
 
+[formatters.colour]
+"()" = "project_name.logger.ColouredFormatter"
+format = "%(asctime)s [%(levelname)s] %(module)s:L%(lineno)04d | %(funcName)s: %(message)s"
+datefmt = "%d-%m-%Y %I:%M:%S"
+
 [formatters.simple]
 format = "[%(levelname)s|%(module)s|L%(lineno)d] %(asctime)s: %(message)s"
 datefmt = "%Y-%m-%dT%H:%M:%S%z"
@@ -17,6 +22,12 @@ module = "module"
 function = "funcName"
 line = "lineno"
 thread_name = "threadName"
+
+[handlers.stdout]
+class = "logging.StreamHandler"
+level = "INFO"
+formatter = "colour"
+stream = "ext://sys.stdout"
 
 [handlers.stderr]
 class = "logging.StreamHandler"
@@ -35,8 +46,9 @@ backupCount = 3
 [handlers.queue_handler]
 class = "project_name.logger.CustomQueueHandler"
 handlers = [
-    "stderr",
     "file_json",
+    # "stderr",
+    "stdout",
 ]
 respect_handler_level = true
 
@@ -45,4 +57,3 @@ level = "DEBUG"
 handlers = [
     "queue_handler",
 ]
-
