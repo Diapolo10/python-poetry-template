@@ -130,6 +130,7 @@ lint.select = [
     "EXE",   # Executable
     "F",     # Pyflakes
     "FA",    # __future__ annotations
+    # "FAST",  # FastAPI
     "FBT",   # "Boolean trap"
     "FIX",   # "FIXME"-comments
     "FLY",   # F-strings
