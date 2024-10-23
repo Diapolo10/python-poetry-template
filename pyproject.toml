@@ -3,6 +3,13 @@ requires = ["poetry-core>=1.2.0", "wheel",]
 build-backend = "poetry.core.masonry.api"
 
 
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: not covered",
+    "@overload",
+]
+
+
 [tool.coverage.run]
 branch = true
 relative_files = true
@@ -39,7 +46,6 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -51,13 +57,13 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "^3.9.0"
 python-dotenv = "^1.0.1"
 tomli = { version = "^2.0.1", python = "<3.11" }
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.8.0"
+mypy = "^1.13.0"
 
 
 [tool.poetry.group.linters]
@@ -65,7 +71,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-ruff = "^0.5.2"
+ruff = "^0.7.0"
 
 
 [tool.poetry.group.tests]
@@ -73,9 +79,9 @@ optional = true
 
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^8.0.0"
+pytest = "^8.3.2"
 pytest-cov = "^5.0.0"
-tox = "^4.12.1"
+tox = "^4.23.0"
 tox-gh-actions = "^3.2.0"
 
 
@@ -127,7 +133,7 @@ lint.select = [
     "FBT",   # "Boolean trap"
     "FIX",   # "FIXME"-comments
     "FLY",   # F-strings
-    # "FURB",  # Refurb
+    "FURB",  # Refurb
     "G",     # Logging format
     "I",     # Isort
     "ICN",   # Import conventions
@@ -171,10 +177,9 @@ lint.ignore = [
     "Q000",    # Single quotes found but double quotes preferred
 ]
 line-length = 120
-# preview = true
 show-fixes = true
 src = ["src",]
-target-version = "py38"
+target-version = "py39"
 
 
 [tool.ruff.lint.flake8-copyright]
@@ -211,15 +216,15 @@ ban-relative-imports = "all"
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py38, py39, py310, py311, pypy3
+envlist = py39, py310, py311, py312, pypy3
 skip_missing_interpreters = true
 
 [gh-actions]
 python =
-    3.8: py38
     3.9: py39
     3.10: py310
     3.11: py311
+    3.12: py312
     pypy-3.10: pypy3
 
 [testenv]
