@@ -3,6 +3,13 @@ requires = ["poetry-core>=1.2.0", "wheel",]
 build-backend = "poetry.core.masonry.api"
 
 
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: not covered",
+    "@overload",
+]
+
+
 [tool.coverage.run]
 branch = true
 relative_files = true
@@ -39,7 +46,6 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -51,7 +57,9 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "^3.9.0"
+python-dotenv = "^1.0.1"
+tomli = { version = "^2.0.1", python = "<3.11" }
 
 
 [tool.poetry.group.dev.dependencies]
@@ -98,113 +106,127 @@ testpaths = [
 
 
 [tool.ruff]
-select = [
-    "A",    # Builtins
-    "ANN",  # Annotations
-    "ARG",  # Unused arguments
-    "B",    # Bugbear
-    "BLE",  # Blind except
-    "C4",   # Comprehensions
-    "C90",  # mccabe
-    "COM",  # Commas
-    "D1",   # Undocumented public elements
-    "D2",   # Docstring conventions
-    "D3",   # Triple double quotes
-    "D4",   # Docstring text format
-    "DTZ",  # Datetimes
-    "EM",   # Error messages
-    "ERA",  # Commented-out code
-    "EXE",  # Executable
-    "F",    # Pyflakes
-    "FA",   # __future__ annotations
-    "FLY",  # F-strings
-    # "FURB", # Refurb
-    "G",    # Logging format
-    "I",    # Isort
-    "ICN",  # Import conventions
-    "INP",  # Disallow PEP-420 (Implicit namespace packages)
-    "INT",  # gettext
-    "ISC",  # Implicit str concat
-    # "LOG",  # Logging
-    "N",    # PEP-8 Naming
-    "NPY",  # Numpy
-    "PERF", # Unnecessary performance costs
-    "PGH",  # Pygrep hooks
-    "PIE",  # Unnecessary code
-    "PL",   # Pylint
-    "PT",   # Pytest
-    "PTH",  # Use Pathlib
-    "PYI",  # Stub files
-    "Q",    # Quotes
-    "RET",  # Return
-    "RUF",  # Ruff
-    "RSE",  # Raise
-    "S",    # Bandit
-    "SIM",  # Code simplification
-    "SLF",  # Private member access
-    "SLOT", # __slots__
-    "T10",  # Debugger
-    "T20",  # Print
-    "TCH",  # Type checking
-    "TID",  # Tidy imports
-    "TRY",  # Exception handling
-    "UP",   # Pyupgrade
-    "W",    # Warnings
-    "YTT",  # sys.version
+lint.select = [
+    "A",     # Builtins
+    # "AIR",   # Airflow
+    "ANN",   # Annotations
+    "ARG",   # Unused arguments
+    "ASYNC", # Asynchronous code
+    "B",     # Bugbear
+    "BLE",   # Blind except
+    "C4",    # Comprehensions
+    "C90",   # mccabe
+    "COM",   # Commas
+    # "CPY",   # Copyright
+    "D1",    # Undocumented public elements
+    "D2",    # Docstring conventions
+    "D3",    # Triple double quotes
+    "D4",    # Docstring text format
+    # "DJ",    # Django
+    "DTZ",   # Datetimes
+    "E",     # Errors
+    "EM",    # Error messages
+    "ERA",   # Commented-out code
+    "EXE",   # Executable
+    "F",     # Pyflakes
+    "FA",    # __future__ annotations
+    # "FAST",  # FastAPI
+    "FBT",   # "Boolean trap"
+    "FIX",   # "FIXME"-comments
+    "FLY",   # F-strings
+    "FURB",  # Refurb
+    "G",     # Logging format
+    "I",     # Isort
+    "ICN",   # Import conventions
+    "INP",   # Disallow PEP-420 (Implicit namespace packages)
+    "INT",   # gettext
+    "ISC",   # Implicit str concat
+    "LOG",   # Logging
+    "N",     # PEP-8 Naming
+    # "NPY",   # Numpy
+    # "PD",    # Pandas
+    "PERF",  # Unnecessary performance costs
+    "PGH",   # Pygrep hooks
+    "PIE",   # Unnecessary code
+    "PL",    # Pylint
+    "PT",    # Pytest
+    "PTH",   # Use Pathlib
+    "PYI",   # Stub files
+    "Q",     # Quotes
+    "RET",   # Return
+    "RUF",   # Ruff
+    "RSE",   # Raise
+    "S",     # Bandit
+    "SIM",   # Code simplification
+    "SLF",   # Private member access
+    "SLOT",  # __slots__
+    "T10",   # Debugger
+    "T20",   # Print
+    "TCH",   # Type checking
+    "TD",    # "TODO"-comments
+    "TID",   # Tidy imports
+    "TRY",   # Exception handling
+    "UP",    # Pyupgrade
+    "W",     # Warnings
+    "YTT",   # sys.version
 ]
-ignore = [
+lint.ignore = [
+    "ANN101",  # Type annotation for `self`
     "D203",    # One blank line before class docstring
     "D212",    # Multi-line summary first line
     "PLR0913", # Too many arguments
     "Q000",    # Single quotes found but double quotes preferred
 ]
-ignore-init-module-imports = true
 line-length = 120
-# preview = true
 show-fixes = true
 src = ["src",]
-target-version = "py38"
+target-version = "py39"
 
 
-[tool.ruff.flake8-quotes]
+[tool.ruff.lint.flake8-copyright]
+author = "Lari Liuhamo"
+
+
+[tool.ruff.lint.flake8-quotes]
 docstring-quotes = "double"
 multiline-quotes = "double"
 
 
-[tool.ruff.mccabe]
-# Unlike Flake8, default to a complexity level of 10.
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 # https://beta.ruff.rs/docs/rules/
-"__init__.py" = ["F401","F403","F405",]
+"__init__.py" = ["F401", "F403", "F405",]
 "tests/*" = ["ANN", "ARG", "INP001", "S101",]
+"logger.py" = ["N815",]
 
 
-[tool.ruff.pylint]
+[tool.ruff.lint.pylint]
 max-args = 15
 max-branches = 20
 max-returns = 10
 max-statements = 80
 
 
-[tool.ruff.flake8-tidy-imports]
+[tool.ruff.lint.flake8-tidy-imports]
 ban-relative-imports = "all"
 
 
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py38, py39, py310, py311, pypy3
+envlist = py39, py310, py311, py312, pypy3
 skip_missing_interpreters = true
 
 [gh-actions]
 python =
-    3.8: py38
     3.9: py39
     3.10: py310
     3.11: py311
+    3.12: py312
+    3.12: py312
     pypy-3.10: pypy3
 
 [testenv]

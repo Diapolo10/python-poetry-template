@@ -1,0 +1,59 @@
+version = 1
+disable_existing_loggers = false
+
+[formatters.colour]
+"()" = "project_name.logger.ColouredFormatter"
+format = "%(asctime)s [%(levelname)s] %(module)s:L%(lineno)04d | %(funcName)s: %(message)s"
+datefmt = "%d-%m-%Y %I:%M:%S"
+
+[formatters.simple]
+format = "[%(levelname)s|%(module)s|L%(lineno)d] %(asctime)s: %(message)s"
+datefmt = "%Y-%m-%dT%H:%M:%S%z"
+
+[formatters.json]
+"()" = "project_name.logger.JSONLogFormatter"
+
+[formatter.json.fmt_keys]
+level = "levelname"
+message = "message"
+timestamp = "timestamp"
+logger = "name"
+module = "module"
+function = "funcName"
+line = "lineno"
+thread_name = "threadName"
+
+[handlers.stdout]
+class = "logging.StreamHandler"
+level = "INFO"
+formatter = "colour"
+stream = "ext://sys.stdout"
+
+[handlers.stderr]
+class = "logging.StreamHandler"
+level = "WARNING"
+formatter = "simple"
+stream = "ext://sys.stderr"
+
+[handlers.file_json]
+class = "logging.handlers.RotatingFileHandler"
+level = "DEBUG"
+formatter = "json"
+filename = "logs/project_name.log.jsonl"
+maxBytes = 10_000_000
+backupCount = 3
+
+[handlers.queue_handler]
+class = "project_name.logger.CustomQueueHandler"
+handlers = [
+    "file_json",
+    # "stderr",
+    "stdout",
+]
+respect_handler_level = true
+
+[loggers.root]
+level = "DEBUG"
+handlers = [
+    "queue_handler",
+]
