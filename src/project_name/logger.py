@@ -8,6 +8,7 @@ import json
 import logging
 import logging.config
 import logging.handlers
+import time
 from enum import Enum, auto
 from pathlib import Path
 from typing import Any, NotRequired, TypedDict, override
@@ -60,6 +61,10 @@ class RecordAttrs(str, Enum):
 
 class ColouredFormatter(logging.Formatter):
     """Coloured log formatter."""
+
+    # This enforces UTC timestamps regardless of local timezone
+    # and is necessary for easier log comparisons
+    converter = time.gmtime
 
     @override
     def format(self, record: logging.LogRecord) -> str:
