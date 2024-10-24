@@ -81,7 +81,6 @@ jobs:
       uses: JRubics/poetry-publish@v2.0
       continue-on-error: true
       with:
-        ignore_dev_requirements: 'yes'
         pypi_token: ${{ secrets.TEST_PYPI_PASSWORD }}
         repository_name: 'testpypi'
         repository_url: 'https://test.pypi.org/legacy/'
