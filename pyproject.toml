@@ -71,7 +71,7 @@ optional = true
 
 
 [tool.poetry.group.linters.dependencies]
-ruff = "^0.8.2"
+ruff = "^0.8.3"
 
 
 [tool.poetry.group.tests]
@@ -162,7 +162,7 @@ lint.select = [
     "SLOT",  # __slots__
     "T10",   # Debugger
     "T20",   # Print
-    "TCH",   # Type checking
+    "TC",   # Type checking
     "TD",    # "TODO"-comments
     "TID",   # Tidy imports
     "TRY",   # Exception handling
@@ -171,7 +171,6 @@ lint.select = [
     "YTT",   # sys.version
 ]
 lint.ignore = [
-    "ANN101",  # Type annotation for `self`
     "D203",    # One blank line before class docstring
     "D212",    # Multi-line summary first line
     "PLR0913", # Too many arguments
