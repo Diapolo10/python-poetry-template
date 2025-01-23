@@ -78,7 +78,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Publish distribution 📦 to Test PyPI
-      uses: JRubics/poetry-publish@v2.0
+      uses: JRubics/poetry-publish@v2.1
       continue-on-error: true
       with:
         pypi_token: ${{ secrets.TEST_PYPI_PASSWORD }}
