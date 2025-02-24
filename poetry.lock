@@ -438,20 +438,20 @@ test = ["devpi-process (>=1.0.2)", "pytest (>=8.3.3)", "pytest-mock (>=3.14)"]
 
 [[package]]
 name = "tox-gh-actions"
-version = "3.2.0"
+version = "3.3.0"
 description = "Seamless integration of tox into GitHub Actions"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "tox-gh-actions-3.2.0.tar.gz", hash = "sha256:ac6fa3b8da51bc90dd77985fd55f09e746c6558c55910c0a93d643045a2b0ccc"},
-    {file = "tox_gh_actions-3.2.0-py2.py3-none-any.whl", hash = "sha256:821b66a4751a788fa3e9617bd796d696507b08c6e1d929ee4faefba06b73b694"},
+    {file = "tox_gh_actions-3.3.0-py2.py3-none-any.whl", hash = "sha256:0e1f9db7a775d04b6d94ab801c60d2d482929a934136262969791eb0ccac65a4"},
+    {file = "tox_gh_actions-3.3.0.tar.gz", hash = "sha256:6933775dd7ab98649de5134283277e604fecfd4eb44bf31150c1c6ba2b1092ef"},
 ]
 
 [package.dependencies]
 tox = ">=4,<5"
 
 [package.extras]
-testing = ["black", "devpi-process", "flake8 (>=6,<7)", "mypy", "pytest (>=7,<8)", "pytest-cov (>=3,<4)", "pytest-mock (>=3,<4)", "pytest-randomly (>=3)"]
+testing = ["black", "devpi-process", "flake8 (>=6,<7)", "mypy", "pytest (>=7)", "pytest-cov (>=4)", "pytest-mock (>=3)", "pytest-randomly (>=3)"]
 
 [[package]]
 name = "typing-extensions"
@@ -487,4 +487,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9.0"
-content-hash = "86389d4e017d4043370c65d2f29e8fae4a706adc2c486c16088ad45f7ae3e26e"
+content-hash = "16cb57557679339b042ee49e47bc1fb2a48a8dd8616a6fb571635316ba1fa562"
