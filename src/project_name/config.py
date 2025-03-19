@@ -13,6 +13,6 @@ load_dotenv()
 PACKAGE_NAME = "project_name"
 
 with pkg_resources.as_file(pkg_resources.files(project_name)) as package_dir:
-    DEFAULT_CONFIG_FILE_PATH = package_dir / 'logger_config.toml'
+    DEFAULT_CONFIG_FILE_PATH = package_dir / "logger_config.toml"
 
 LOGGER_CONFIG_FILE = Path(os.environ.get("PROJECT_NAME_LOGGER_CONFIG_FILE", DEFAULT_CONFIG_FILE_PATH))

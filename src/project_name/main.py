@@ -11,7 +11,7 @@ def main() -> None:
     """Lorem Ipsum."""
     setup_logging()
 
-    logger.debug("debug message", extra={'foo': 'hello'})
+    logger.debug("debug message", extra={"foo": "hello"})
     logger.info("info message")
     logger.warning("warning message")
     logger.error("error message")
@@ -23,5 +23,5 @@ def main() -> None:
         logger.exception("exception message")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

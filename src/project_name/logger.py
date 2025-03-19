@@ -22,7 +22,7 @@ from project_name.config import LOGGER_CONFIG_FILE, PACKAGE_NAME
 
 ROOT_LOGGER_NAME = PACKAGE_NAME
 
-__all__ = ('ROOT_LOGGER_NAME', 'setup_logging')
+__all__ = ("ROOT_LOGGER_NAME", "setup_logging")
 
 
 class RecordAttrs(str, Enum):
@@ -70,18 +70,16 @@ class ColouredFormatter(logging.Formatter):
     def format(self, record: logging.LogRecord) -> str:
         """Format the log record."""
         log_level_colours = {
-            logging.CRITICAL: '\033[31;1;40m',  # Red, bold
-            logging.ERROR: '\033[31;40m',       # Red
-            logging.WARNING: '\033[33;40m',     # Yellow
-            logging.INFO: '\033[32;40m',        # Green
-            logging.DEBUG: '\033[36;40m',       # Cyan
+            logging.CRITICAL: "\033[31;1;40m",  # Red, bold
+            logging.ERROR: "\033[31;40m",  # Red
+            logging.WARNING: "\033[33;40m",  # Yellow
+            logging.INFO: "\033[32;40m",  # Green
+            logging.DEBUG: "\033[36;40m",  # Cyan
         }
-        reset = '\033[0m'
+        reset = "\033[0m"
 
         record.msg = f"{log_level_colours.get(record.levelno, reset)}{record.msg}{reset}"
-        record.levelname = (
-            f"{log_level_colours.get(record.levelno, reset)}{record.levelname:^8}{reset}"
-        )
+        record.levelname = f"{log_level_colours.get(record.levelno, reset)}{record.levelname:^8}{reset}"
 
         return super().format(record)
 
@@ -122,11 +120,7 @@ class JSONLogFormatter(logging.Formatter):
     @override
     def __init__(self, *, fmt_keys: FormatKeys | None = None) -> None:
         super().__init__()
-        self.fmt_keys = (
-            fmt_keys
-            if fmt_keys is not None
-            else FormatKeys()
-        )
+        self.fmt_keys = fmt_keys if fmt_keys is not None else FormatKeys()
 
     @override
     def format(self, record: logging.LogRecord) -> str:
@@ -135,18 +129,18 @@ class JSONLogFormatter(logging.Formatter):
 
     def _prepare_log_dict(self, record: logging.LogRecord) -> LogDict:
         required_fields: LogDict = {
-            'message': record.getMessage(),
-            'timestamp': dt.datetime.fromtimestamp(
+            "message": record.getMessage(),
+            "timestamp": dt.datetime.fromtimestamp(
                 record.created,
                 tz=dt.timezone.utc,
             ),
         }
 
         if record.exc_info is not None:
-            required_fields['exc_info'] = self.formatException(record.exc_info)
+            required_fields["exc_info"] = self.formatException(record.exc_info)
 
         if record.stack_info is not None:
-            required_fields['stack_info'] = self.formatStack(record.stack_info)
+            required_fields["stack_info"] = self.formatStack(record.stack_info)
 
         message: LogDict = {  # type: ignore[assignment]
             key: msg_val
@@ -166,8 +160,8 @@ class JSONLogFormatter(logging.Formatter):
 
 def setup_logging() -> None:
     """Set up logging."""
-    (Path.cwd() / 'logs').mkdir(exist_ok=True)
-    logger_data = LOGGER_CONFIG_FILE.read_text(encoding='utf-8')
+    (Path.cwd() / "logs").mkdir(exist_ok=True)
+    logger_data = LOGGER_CONFIG_FILE.read_text(encoding="utf-8")
     logging_config = tomllib.loads(logger_data)
     logging.config.dictConfig(logging_config)
 
