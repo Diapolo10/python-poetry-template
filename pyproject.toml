@@ -63,7 +63,7 @@ tomli = { version = "^2.2.1", python = "<3.11" }
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.18.1"
+mypy = "^1.18.2"
 
 
 [tool.poetry.group.linters]
