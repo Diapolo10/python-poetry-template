@@ -530,14 +530,14 @@ virtualenv = ">=20.31.2"
 
 [[package]]
 name = "tox-gh-actions"
-version = "3.4.0"
+version = "3.5.0"
 description = "Seamless integration of tox into GitHub Actions"
 optional = false
 python-versions = ">=3.7"
 groups = ["tests"]
 files = [
-    {file = "tox_gh_actions-3.4.0-py3-none-any.whl", hash = "sha256:31abb90827472181c17ed07385493e4614fd8c03955e43fef42c06a366712850"},
-    {file = "tox_gh_actions-3.4.0.tar.gz", hash = "sha256:76e80610fe5cda2f57af0ef45537d8f86c36d0bb8823feb20f85d30f4a7600ce"},
+    {file = "tox_gh_actions-3.5.0-py3-none-any.whl", hash = "sha256:070790114c92f4c94337047515ca5e077ceb269a5cb9366e0a0b3440a024eca1"},
+    {file = "tox_gh_actions-3.5.0.tar.gz", hash = "sha256:cc8e148c4513042e5019973e5672594c3df241b035e7fb550f6f778588110051"},
 ]
 
 [package.dependencies]
@@ -583,4 +583,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9.0"
-content-hash = "48f35e0e3acb2167f90357d84f17adc1ab769babe071b3f1bc61bfc117e6ce2f"
+content-hash = "72effafc2a474ef4cfc2ed0999be6a21d24bfeca41a60d5ee67e636d4e096d2c"
