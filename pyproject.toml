@@ -57,7 +57,7 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.9.0"
+python = "^3.10.0"
 python-dotenv = "^1.2.1"
 tomli = { version = "^2.3.0", python = "<3.11" }
 
@@ -79,7 +79,7 @@ optional = true
 
 
 [tool.poetry.group.tests.dependencies]
-pytest = "^8.4.2"
+pytest = "^9.0.2"
 pytest-cov = "^7.0.0"
 tox = "^4.30.3"
 tox-gh-actions = "^3.5.0"
