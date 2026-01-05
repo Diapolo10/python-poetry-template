@@ -177,14 +177,14 @@ test = ["pytest (>=6)"]
 
 [[package]]
 name = "filelock"
-version = "3.20.1"
+version = "3.20.2"
 description = "A platform independent file lock."
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "filelock-3.20.1-py3-none-any.whl", hash = "sha256:15d9e9a67306188a44baa72f569d2bfd803076269365fdea0934385da4dc361a"},
-    {file = "filelock-3.20.1.tar.gz", hash = "sha256:b8360948b351b80f420878d8516519a2204b07aefcdcfd24912a5d33127f188c"},
+    {file = "filelock-3.20.2-py3-none-any.whl", hash = "sha256:fbba7237d6ea277175a32c54bb71ef814a8546d8601269e1bfc388de333974e8"},
+    {file = "filelock-3.20.2.tar.gz", hash = "sha256:a2241ff4ddde2a7cebddf78e39832509cb045d18ec1a09d7248d6bfc6bfbbe64"},
 ]
 
 [[package]]
@@ -595,28 +595,28 @@ markers = {main = "python_version < \"3.11\"", dev = "python_version < \"3.11\""
 
 [[package]]
 name = "tox"
-version = "4.32.0"
+version = "4.33.0"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.32.0-py3-none-any.whl", hash = "sha256:451e81dc02ba8d1ed20efd52ee409641ae4b5d5830e008af10fe8823ef1bd551"},
-    {file = "tox-4.32.0.tar.gz", hash = "sha256:1ad476b5f4d3679455b89a992849ffc3367560bbc7e9495ee8a3963542e7c8ff"},
+    {file = "tox-4.33.0-py3-none-any.whl", hash = "sha256:8582ac5c3ca97095ce88ae6bcd310d22614350ea9751b0e4ad39acad7874e270"},
+    {file = "tox-4.33.0.tar.gz", hash = "sha256:a29244bce3f514f94043e173366aa191c8cf0106ec8ddd18ba53f985acd73cc4"},
 ]
 
 [package.dependencies]
-cachetools = ">=6.2"
+cachetools = ">=6.2.4"
 chardet = ">=5.2"
 colorama = ">=0.4.6"
-filelock = ">=3.20"
+filelock = ">=3.20.2"
 packaging = ">=25"
-platformdirs = ">=4.5"
+platformdirs = ">=4.5.1"
 pluggy = ">=1.6"
-pyproject-api = ">=1.9.1"
+pyproject-api = ">=1.10"
 tomli = {version = ">=2.3", markers = "python_version < \"3.11\""}
 typing-extensions = {version = ">=4.15", markers = "python_version < \"3.11\""}
-virtualenv = ">=20.34"
+virtualenv = ">=20.35.4"
 
 [[package]]
 name = "tox-gh-actions"
@@ -674,4 +674,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "a582b4b43b151756f4d0673177814b0c4f7ed76f8b78a9b4ca59614546072895"
+content-hash = "1d556b8656d7a179857708098ddf012853ea38020abb65a51058185dfd103f57"
