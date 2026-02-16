@@ -177,14 +177,14 @@ test = ["pytest (>=6)"]
 
 [[package]]
 name = "filelock"
-version = "3.20.3"
+version = "3.24.2"
 description = "A platform independent file lock."
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "filelock-3.20.3-py3-none-any.whl", hash = "sha256:4b0dda527ee31078689fc205ec4f1c1bf7d56cf88b6dc9426c4f230e46c2dce1"},
-    {file = "filelock-3.20.3.tar.gz", hash = "sha256:18c57ee915c7ec61cff0ecf7f0f869936c7c30191bb0cf406f1341778d0834e1"},
+    {file = "filelock-3.24.2-py3-none-any.whl", hash = "sha256:667d7dc0b7d1e1064dd5f8f8e80bdac157a6482e8d2e02cd16fd3b6b33bd6556"},
+    {file = "filelock-3.24.2.tar.gz", hash = "sha256:c22803117490f156e59fafce621f0550a7a853e2bbf4f87f112b11d469b6c81b"},
 ]
 
 [[package]]
@@ -386,20 +386,15 @@ files = [
 
 [[package]]
 name = "platformdirs"
-version = "4.5.1"
+version = "4.9.2"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "platformdirs-4.5.1-py3-none-any.whl", hash = "sha256:d03afa3963c806a9bed9d5125c8f4cb2fdaf74a55ab60e5d59b3fde758104d31"},
-    {file = "platformdirs-4.5.1.tar.gz", hash = "sha256:61d5cdcc6065745cdd94f0f878977f8de9437be93de97c1c12f853c9c0cdcbda"},
+    {file = "platformdirs-4.9.2-py3-none-any.whl", hash = "sha256:9170634f126f8efdae22fb58ae8a0eaa86f38365bc57897a6c4f781d1f5875bd"},
+    {file = "platformdirs-4.9.2.tar.gz", hash = "sha256:9a33809944b9db043ad67ca0db94b14bf452cc6aeaac46a88ea55b26e2e9d291"},
 ]
-
-[package.extras]
-docs = ["furo (>=2025.9.25)", "proselint (>=0.14)", "sphinx (>=8.2.3)", "sphinx-autodoc-typehints (>=3.2)"]
-test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.4.2)", "pytest-cov (>=7)", "pytest-mock (>=3.15.1)"]
-type = ["mypy (>=1.18.2)"]
 
 [[package]]
 name = "pluggy"
@@ -599,28 +594,31 @@ markers = {main = "python_version < \"3.11\"", dev = "python_version < \"3.11\""
 
 [[package]]
 name = "tox"
-version = "4.35.0"
+version = "4.36.0"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.35.0-py3-none-any.whl", hash = "sha256:282aa2e1f96328ad197ee09878ff241610426cd8ec01e62a04eb51c987da922d"},
-    {file = "tox-4.35.0.tar.gz", hash = "sha256:74d2fe33eb37233d506f854196bd7bd7e2fbb79e8d9b4bed214ab3da98740876"},
+    {file = "tox-4.36.0-py3-none-any.whl", hash = "sha256:5d5e00cf5c18d0a65f18fa2e4b4cad4f7415b589e29d1b40d62910e33433b572"},
+    {file = "tox-4.36.0.tar.gz", hash = "sha256:dfd56fd563d79b866fa4800a9ea75ec40b80fb14c6238e38e4949537b859aa0e"},
 ]
 
 [package.dependencies]
-cachetools = ">=6.2.5"
+cachetools = ">=7.0.1"
 chardet = ">=5.2"
 colorama = ">=0.4.6"
-filelock = ">=3.20.3"
+filelock = ">=3.24"
 packaging = ">=26"
-platformdirs = ">=4.5.1"
+platformdirs = ">=4.9.1"
 pluggy = ">=1.6"
 pyproject-api = ">=1.10"
 tomli = {version = ">=2.4", markers = "python_version < \"3.11\""}
 typing-extensions = {version = ">=4.15", markers = "python_version < \"3.11\""}
 virtualenv = ">=20.36.1"
+
+[package.extras]
+completion = ["argcomplete (>=3.6.3)"]
 
 [[package]]
 name = "tox-gh-actions"
@@ -678,4 +676,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "e2558815f70685a54f353e0b1ce378a8f2f7b3ae4751235e76daf3fda928039a"
+content-hash = "601ca026f05fd8d8b79d522b5ca7cb55661b061abb517de7e159ad9c710f26cf"
