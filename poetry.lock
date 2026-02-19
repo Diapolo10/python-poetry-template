@@ -594,14 +594,14 @@ markers = {main = "python_version < \"3.11\"", dev = "python_version < \"3.11\""
 
 [[package]]
 name = "tox"
-version = "4.38.0"
+version = "4.40.0"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.38.0-py3-none-any.whl", hash = "sha256:0e90b771c609a6b44012ceadbba72ef6e428063707519491e3eae062e3aa1177"},
-    {file = "tox-4.38.0.tar.gz", hash = "sha256:b053e32eabf09501b0b3903ac8ffe927ec5191304f3a56cff3adc1314c1bb2e7"},
+    {file = "tox-4.40.0-py3-none-any.whl", hash = "sha256:9bffdca463154a13cb79a33a9e6927f35577b304c9442e583a60f0ec491b9168"},
+    {file = "tox-4.40.0.tar.gz", hash = "sha256:ba1503111fe3ffe8b3427bb491d99c0b2c865f36f94c7b91f73c485e81aa7bd2"},
 ]
 
 [package.dependencies]
@@ -676,4 +676,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "484865cce7e408e234e2095645cd747f7b1d3d4253b3d20032dc1b979eabf074"
+content-hash = "c9b4bba91c1a04739c260a941be5beb9f843edfd07656106143d0d023082cb76"
