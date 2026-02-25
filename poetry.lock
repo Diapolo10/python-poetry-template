@@ -13,18 +13,6 @@ files = [
 ]
 
 [[package]]
-name = "chardet"
-version = "6.0.0.post1"
-description = "Universal encoding detector for Python 3"
-optional = false
-python-versions = ">=3.10"
-groups = ["tests"]
-files = [
-    {file = "chardet-6.0.0.post1-py3-none-any.whl", hash = "sha256:c894a36800549adf7bb5f2af47033281b75fdfcd2aa0f0243be0ad22a52e2dcb"},
-    {file = "chardet-6.0.0.post1.tar.gz", hash = "sha256:6b78048c3c97c7b2ed1fbad7a18f76f5a6547f7d34dbab536cc13887c9a92fa4"},
-]
-
-[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -594,19 +582,18 @@ markers = {main = "python_version < \"3.11\"", dev = "python_version < \"3.11\""
 
 [[package]]
 name = "tox"
-version = "4.45.0"
+version = "4.46.0"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.45.0-py3-none-any.whl", hash = "sha256:a9910fab652c9b378659a4d13a2cbdaebd3737c60bd1a96b7b573a89824f4e7c"},
-    {file = "tox-4.45.0.tar.gz", hash = "sha256:c0ce50ce0f7ace524cca9cf85d4a9fbd8e338aaa830e33521d3355f3f2f97c05"},
+    {file = "tox-4.46.0-py3-none-any.whl", hash = "sha256:828f0a119a22028dbff7495d288e3601406478ab20c97891f66be5516d72e4c3"},
+    {file = "tox-4.46.0.tar.gz", hash = "sha256:b9d1aa187101dae184b7e6552f3b1ff85461e9e32f078851426e35a3c2009bc1"},
 ]
 
 [package.dependencies]
 cachetools = ">=7.0.1"
-chardet = ">=6.0.0.post1"
 colorama = ">=0.4.6"
 filelock = ">=3.24.3"
 packaging = ">=26"
@@ -672,4 +659,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "9113436273c6d54fa077a4115779960b05a35345b5d4d240488d3c0658744403"
+content-hash = "d49306ed3537ef204cbacbfb80477b7d99cb829cb216e4457bdcd721509b588a"
