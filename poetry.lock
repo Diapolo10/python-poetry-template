@@ -582,14 +582,14 @@ markers = {main = "python_version < \"3.11\"", dev = "python_version < \"3.11\""
 
 [[package]]
 name = "tox"
-version = "4.46.0"
+version = "4.46.3"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.46.0-py3-none-any.whl", hash = "sha256:828f0a119a22028dbff7495d288e3601406478ab20c97891f66be5516d72e4c3"},
-    {file = "tox-4.46.0.tar.gz", hash = "sha256:b9d1aa187101dae184b7e6552f3b1ff85461e9e32f078851426e35a3c2009bc1"},
+    {file = "tox-4.46.3-py3-none-any.whl", hash = "sha256:e9e1a91bce2836dba8169c005254913bd22aac490131c75a5ffc4fd091dffe0b"},
+    {file = "tox-4.46.3.tar.gz", hash = "sha256:2e87609b7832c818cad093304ea23d7eb124f8ecbab0625463b73ce5e850e1c2"},
 ]
 
 [package.dependencies]
@@ -602,7 +602,7 @@ pluggy = ">=1.6"
 pyproject-api = ">=1.10"
 tomli = {version = ">=2.4", markers = "python_version < \"3.11\""}
 typing-extensions = {version = ">=4.15", markers = "python_version < \"3.11\""}
-virtualenv = ">=20.38"
+virtualenv = ">=20.39"
 
 [package.extras]
 completion = ["argcomplete (>=3.6.3)"]
@@ -659,4 +659,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "d49306ed3537ef204cbacbfb80477b7d99cb829cb216e4457bdcd721509b588a"
+content-hash = "5ea7e338178d6a564b99d79bb269527ebd59443e1fa3616c26cf4acc9bcc3ce9"
