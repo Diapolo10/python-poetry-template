@@ -581,15 +581,27 @@ files = [
 markers = {main = "python_version < \"3.11\"", dev = "python_version < \"3.11\"", tests = "python_full_version <= \"3.11.0a6\""}
 
 [[package]]
+name = "tomli-w"
+version = "1.2.0"
+description = "A lil' TOML writer"
+optional = false
+python-versions = ">=3.9"
+groups = ["tests"]
+files = [
+    {file = "tomli_w-1.2.0-py3-none-any.whl", hash = "sha256:188306098d013b691fcadc011abd66727d3c414c571bb01b1a174ba8c983cf90"},
+    {file = "tomli_w-1.2.0.tar.gz", hash = "sha256:2dd14fac5a47c27be9cd4c976af5a12d87fb1f0b4512f81d69cce3b35ae25021"},
+]
+
+[[package]]
 name = "tox"
-version = "4.47.3"
+version = "4.48.1"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.47.3-py3-none-any.whl", hash = "sha256:e447862a6821b421bbbfb8cbac071818c0a6884907a4c964d8322516d0b19b34"},
-    {file = "tox-4.47.3.tar.gz", hash = "sha256:57643508d4c218ad312457a3b0ce3135c50fa1f9f1e4d40867683d880cad1c37"},
+    {file = "tox-4.48.1-py3-none-any.whl", hash = "sha256:4e0369041be0d52b0dc83051f6449e4afae1764b4203a5866982fa300c8c325f"},
+    {file = "tox-4.48.1.tar.gz", hash = "sha256:971260ac2ea3409de8f3771612d141713d2d33446cc0d981849ebfd9b6bbd3d9"},
 ]
 
 [package.dependencies]
@@ -601,6 +613,7 @@ platformdirs = ">=4.9.2"
 pluggy = ">=1.6"
 pyproject-api = ">=1.10"
 tomli = {version = ">=2.4", markers = "python_version < \"3.11\""}
+tomli-w = ">=1.1"
 typing-extensions = {version = ">=4.15", markers = "python_version < \"3.11\""}
 virtualenv = ">=20.39"
 
@@ -659,4 +672,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "0d38d9d74373ba322781452e7d766b4a9af8ef8ab791fd537a15827e259190ec"
+content-hash = "e892d1549e7375065b4494b8d5d544d257429c7a70a9e783d8e7f6eddf4827c1"
