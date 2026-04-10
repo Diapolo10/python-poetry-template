@@ -508,14 +508,14 @@ testing = ["process-tests", "pytest-xdist", "virtualenv"]
 
 [[package]]
 name = "python-discovery"
-version = "1.2.1"
+version = "1.2.2"
 description = "Python interpreter discovery"
 optional = false
 python-versions = ">=3.8"
 groups = ["tests"]
 files = [
-    {file = "python_discovery-1.2.1-py3-none-any.whl", hash = "sha256:b6a957b24c1cd79252484d3566d1b49527581d46e789aaf43181005e56201502"},
-    {file = "python_discovery-1.2.1.tar.gz", hash = "sha256:180c4d114bff1c32462537eac5d6a332b768242b76b69c0259c7d14b1b680c9e"},
+    {file = "python_discovery-1.2.2-py3-none-any.whl", hash = "sha256:e1ae95d9af875e78f15e19aed0c6137ab1bb49c200f21f5061786490c9585c7a"},
+    {file = "python_discovery-1.2.2.tar.gz", hash = "sha256:876e9c57139eb757cb5878cbdd9ae5379e5d96266c99ef731119e04fffe533bb"},
 ]
 
 [package.dependencies]
@@ -641,14 +641,14 @@ files = [
 
 [[package]]
 name = "tox"
-version = "4.52.0"
+version = "4.52.1"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.52.0-py3-none-any.whl", hash = "sha256:624d8ea4a8c6d5e8d168eedf0e318d736fb22e83ca83137d001ac65ffdec46fd"},
-    {file = "tox-4.52.0.tar.gz", hash = "sha256:6054abf5c8b61d58776fbec991f9bf0d34bb883862beb93d2fe55601ef3977c9"},
+    {file = "tox-4.52.1-py3-none-any.whl", hash = "sha256:3c4eef0a64f319df0b67dacdb7edcfeda87c8cc722581af5d98dd54f3ffdd8ef"},
+    {file = "tox-4.52.1.tar.gz", hash = "sha256:297e71ea0ae4ef3acc45cb5fdf080b74537e6ecb5eea7d4646fa7322ca10473e"},
 ]
 
 [package.dependencies]
@@ -659,7 +659,7 @@ packaging = ">=26"
 platformdirs = ">=4.9.4"
 pluggy = ">=1.6"
 pyproject-api = ">=1.10"
-python-discovery = ">=1.2.1"
+python-discovery = ">=1.2.2"
 tomli = {version = ">=2.4", markers = "python_version < \"3.11\""}
 tomli-w = ">=1.2"
 typing-extensions = {version = ">=4.15", markers = "python_version < \"3.11\""}
@@ -721,4 +721,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "218a509cf4796547f559b150b45ef3bcf5ebb89be9351b4d3570bf4d99cdcbbd"
+content-hash = "50524451cd20b81efa78fabd9f27bef819a92ff8b369c5cbcba8d2c333601ca4"
