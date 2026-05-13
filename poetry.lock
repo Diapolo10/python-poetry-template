@@ -685,14 +685,14 @@ files = [
 
 [[package]]
 name = "tox"
-version = "4.53.1"
+version = "4.54.0"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.53.1-py3-none-any.whl", hash = "sha256:4a9948607e976a337c22d64a1b4fafd486125e82f00ab6ce32fa6cacc23f48b1"},
-    {file = "tox-4.53.1.tar.gz", hash = "sha256:7be9805ed4a34242510c7acc9a7e3a01a35942e08f31f8bd69067c3a37130afc"},
+    {file = "tox-4.54.0-py3-none-any.whl", hash = "sha256:a2d7c1177242ae9c3d9e404039e9f945ce16a3e5dfc66972c643e27d7e764f4b"},
+    {file = "tox-4.54.0.tar.gz", hash = "sha256:21e36fd8256590379620848d0b03b52f4d541b65b749de1a17c3e616978dad58"},
 ]
 
 [package.dependencies]
@@ -711,6 +711,7 @@ virtualenv = ">=21.1"
 
 [package.extras]
 completion = ["argcomplete (>=3.6.3)"]
+testing = ["devpi-process (>=1.1.1)", "pytest (>=9.0.2)", "pytest-mock (>=3.15.1)"]
 
 [[package]]
 name = "tox-gh-actions"
@@ -765,4 +766,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "7bbd3d83167e11c8e6fac1b677f6985c330e0a0ad374a324d6cef07a82a23e83"
+content-hash = "587ecb5e8b55d294236705e4000ddd97967d7f325e544f12b341b82bffe38c9c"
