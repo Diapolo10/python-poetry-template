@@ -1,22 +1,16 @@
 [build-system]
-requires = ["poetry-core>=1.2.0", "wheel",]
+requires = ["poetry-core>=1.2.0", "wheel"]
 build-backend = "poetry.core.masonry.api"
 
 
 [tool.coverage.report]
-exclude_lines = [
-    "pragma: not covered",
-    "@overload",
-]
+exclude_lines = ["pragma: not covered", "@overload"]
 
 
 [tool.coverage.run]
 branch = true
 relative_files = true
-omit = [
-    ".tox/*",
-    "tests/*",
-]
+omit = [".tox/*", "tests/*"]
 
 
 [tool.poetry]
@@ -24,12 +18,10 @@ name = "project-name"
 version = "0.1.0"
 description = "A template Poetry project structure."
 
-packages = [
-    { include = "project_name", from = "src" },
-]
+packages = [{ include = "project_name", from = "src" }]
 
-authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
-maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>",]
+authors = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>"]
+maintainers = ["Lari Liuhamo <lari.liuhamo+pypi@gmail.com>"]
 
 include = []
 license = "MIT"
@@ -39,9 +31,7 @@ homepage = "https://pypi.org/project/project-name/"
 repository = "https://github.com/Diapolo10/project-name"
 documentation = "https://github.com/Diapolo10/project-name/tree/main/docs"
 
-keywords = [
-    "python3",
-]
+keywords = ["python3"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: MIT License",
@@ -59,6 +49,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.10.0"
 python-dotenv = "^1.2.2"
+pygments = "^2.20.0"                             # Not used, but needed to fix CVE-2026-4539
 tomli = { version = "^2.4.1", python = "<3.11" }
 
 
@@ -100,9 +91,7 @@ addopts = """
 --cov-report xml:tests/reports/coverage.xml \
 --ignore=docs/
 """
-testpaths = [
-    "tests",
-]
+testpaths = ["tests"]
 
 
 [tool.ruff]
@@ -116,7 +105,7 @@ lint.ignore = [
 ]
 line-length = 120
 show-fixes = true
-src = ["src",]
+src = ["src"]
 target-version = "py310"
 
 
@@ -135,9 +124,9 @@ max-complexity = 10
 
 [tool.ruff.lint.per-file-ignores]
 # https://beta.ruff.rs/docs/rules/
-"__init__.py" = ["F401", "F403", "F405",]
-"tests/*" = ["ANN", "ARG", "INP001", "S101",]
-"logger.py" = ["N815",]
+"__init__.py" = ["F401", "F403", "F405"]
+"tests/*" = ["ANN", "ARG", "INP001", "S101"]
+"logger.py" = ["N815"]
 
 
 [tool.ruff.lint.pylint]
