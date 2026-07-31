@@ -98,6 +98,7 @@ testpaths = ["tests"]
 lint.fixable = ["ALL"]
 lint.select = ["ALL"]
 lint.ignore = [
+    "CPY001",  # Missing copyright notice at the top of the file
     "D203",    # One blank line before class docstring
     "D212",    # Multi-line summary first line
     "PLR0913", # Too many arguments
