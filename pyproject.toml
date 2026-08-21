@@ -48,7 +48,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10.0"
-python-dotenv = "^1.2.2"
+python-dotenv = "^1.2.3"
 pygments = "^2.21.0"                             # Not used, but needed to fix CVE-2026-4539
 tomli = { version = "^2.4.1", python = "<3.11" }
 
