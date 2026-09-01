@@ -711,14 +711,14 @@ files = [
 
 [[package]]
 name = "tox"
-version = "4.60.1"
+version = "4.61.1"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.60.1-py3-none-any.whl", hash = "sha256:6f23a6417ad761b17c047e14b6e278968c09eb9b1fc00025269f82ec8327bc75"},
-    {file = "tox-4.60.1.tar.gz", hash = "sha256:2611b77ebe06fa571ae2f4176eaf644115d08891befb9c7cb705cb038d5ab38e"},
+    {file = "tox-4.61.1-py3-none-any.whl", hash = "sha256:90bf9cf074d38ab87bff1753183d96c07e9e99d04acc2230d21f42f7aa89d1c6"},
+    {file = "tox-4.61.1.tar.gz", hash = "sha256:d41ff6eb434d71763740ec90d869cb82688e6ff9204c913d8bea13fb75fc8f9a"},
 ]
 
 [package.dependencies]
@@ -792,4 +792,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "c81643ecc5c444a721c9828a468c18a47981b5f4ee80dd56377af2dc754c4ada"
+content-hash = "27016f0463123002de10148a2dc5668b96c98ac055ee88d17158562ba7eb8132"
