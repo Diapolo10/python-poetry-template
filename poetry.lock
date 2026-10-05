@@ -196,7 +196,7 @@ version = "0.4.0"
 description = "Distribution utilities"
 optional = false
 python-versions = "*"
-groups = ["dev", "tests"]
+groups = ["tests"]
 files = [
     {file = "distlib-0.4.0-py2.py3-none-any.whl", hash = "sha256:9659f7d87e46584a30b5780e43ac7a2143098441670ff0a49d5f9034c54a6c16"},
     {file = "distlib-0.4.0.tar.gz", hash = "sha256:feec40075be03a04501a973d81f633735b4b69f98b05450592310c0f401a4e0d"},
@@ -227,7 +227,7 @@ version = "3.29.0"
 description = "A platform independent file lock."
 optional = false
 python-versions = ">=3.10"
-groups = ["dev", "tests"]
+groups = ["tests"]
 files = [
     {file = "filelock-3.29.0-py3-none-any.whl", hash = "sha256:96f5f6344709aa1572bbf631c640e4ebeeb519e08da902c39a001882f30ac258"},
     {file = "filelock-3.29.0.tar.gz", hash = "sha256:69974355e960702e789734cb4871f884ea6fe50bd8404051a3530bc07809cf90"},
@@ -475,7 +475,7 @@ version = "4.9.6"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 optional = false
 python-versions = ">=3.10"
-groups = ["dev", "tests"]
+groups = ["tests"]
 files = [
     {file = "platformdirs-4.9.6-py3-none-any.whl", hash = "sha256:e61adb1d5e5cb3441b4b7710bea7e4c12250ca49439228cc1021c00dcfac0917"},
     {file = "platformdirs-4.9.6.tar.gz", hash = "sha256:3bfa75b0ad0db84096ae777218481852c0ebc6c727b3168c1b9e0118e458cf0a"},
@@ -582,7 +582,7 @@ version = "1.6.1"
 description = "Python interpreter discovery"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev", "tests"]
+groups = ["tests"]
 files = [
     {file = "python_discovery-1.6.1-py3-none-any.whl", hash = "sha256:d43fcdef879fe795352bd13ccf8d185ba5a9f86f36cfcd00529f596e737442b3"},
     {file = "python_discovery-1.6.1.tar.gz", hash = "sha256:cf87d3627dfb4412437fdd5b13eae402607722998d21567993aedbc59b23c15e"},
@@ -706,14 +706,14 @@ files = [
 
 [[package]]
 name = "tox"
-version = "4.64.4"
+version = "4.64.7"
 description = "tox is a generic virtualenv management and test command line tool"
 optional = false
 python-versions = ">=3.10"
 groups = ["tests"]
 files = [
-    {file = "tox-4.64.4-py3-none-any.whl", hash = "sha256:7158441d235d9e1b588f0e9f0547c07a45b3bd2f31530adb14ff5b3c1e84daeb"},
-    {file = "tox-4.64.4.tar.gz", hash = "sha256:99e2a36e75202bd468f68126be25f72b8d8483e4a27b65252d6f019e856e62fd"},
+    {file = "tox-4.64.7-py3-none-any.whl", hash = "sha256:4e7a906f26b72fa9bf11577d02bde492c6d0ad8e690921a801893354d05d35fe"},
+    {file = "tox-4.64.7.tar.gz", hash = "sha256:b8033a00945a02493adebdc337e4e45136e21a7083c00b2ae27c998370b72af3"},
 ]
 
 [package.dependencies]
@@ -771,7 +771,7 @@ version = "21.7.12"
 description = "Virtual Python Environment builder"
 optional = false
 python-versions = ">=3.9"
-groups = ["dev", "tests"]
+groups = ["tests"]
 files = [
     {file = "virtualenv-21.7.12-py3-none-any.whl", hash = "sha256:3572a2e13deac1c2727e48ec43dc962f698c453c5c90eb2bd737c81bcd2ac0b0"},
     {file = "virtualenv-21.7.12.tar.gz", hash = "sha256:5b6576455f10637067cc20c3f9f7c677575eecaa8c95fc049db2f650652befd5"},
@@ -787,4 +787,4 @@ typing-extensions = {version = ">=4.13.2", markers = "python_version < \"3.11\""
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10.0"
-content-hash = "af641fd620b0e30eb2bfe02d1ffd5a912ce3e6f6b24e75c28097f25d157bfc83"
+content-hash = "73bce614892471518c1601de41a93458aefdb467a95b7f04b00f36313a9e6510"
