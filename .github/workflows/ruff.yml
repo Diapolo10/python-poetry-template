@@ -6,9 +6,8 @@ on:
   push:
     branches:
       - '**'
-  pull_request:
-    branches:
-      - '**'
+    tags-ignore:
+      - 'v*' # Avoid re-running existing commit on release
 
 permissions:
   contents: write
