@@ -719,14 +719,14 @@ testing = ["devpi-process (>=1.1.1)", "pytest (>=9.0.2)", "pytest-mock (>=3.15.1
 
 [[package]]
 name = "tox-gh-actions"
-version = "3.5.0"
+version = "3.5.1"
 description = "Seamless integration of tox into GitHub Actions"
 optional = false
 python-versions = ">=3.7"
 groups = ["tests"]
 files = [
-    {file = "tox_gh_actions-3.5.0-py3-none-any.whl", hash = "sha256:070790114c92f4c94337047515ca5e077ceb269a5cb9366e0a0b3440a024eca1"},
-    {file = "tox_gh_actions-3.5.0.tar.gz", hash = "sha256:cc8e148c4513042e5019973e5672594c3df241b035e7fb550f6f778588110051"},
+    {file = "tox_gh_actions-3.5.1-py3-none-any.whl", hash = "sha256:c8183a4ec490d59770e10b68e6062bcf5421b7c9159f66842591da0aa21c8bf7"},
+    {file = "tox_gh_actions-3.5.1.tar.gz", hash = "sha256:64110badbcfa0443a4a35102dbc4b9141926f9e5114f62f97e66a234e177b7a5"},
 ]
 
 [package.dependencies]
